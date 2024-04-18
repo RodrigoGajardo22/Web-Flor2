@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Carrusel */
+#container-slider {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0; /* Eliminar margen */
+  padding: 0; /* Eliminar padding */
+}
+
+#slider {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh; /* Usar el 100% de la altura de la ventana */
+  min-height: 500px;
+  margin: 0; /* Eliminar margen */
+  padding: 0; /* Eliminar padding */
+}
+
+#slider li {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100%;
+  height: 100%;
+  display: block;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* Flechas del Carrusel */
+#container-slider .arrowPrev,
+#container-slider .arrowNext {
+  font-size: 30pt;
+  color: #020202;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+}
+
+#container-slider .arrowNext {
+  left: initial;
+  right: 50px !important;
+}
+
+/* Contenido del Carrusel */
+.content_slider {
+  padding: 15px 30px;
+  color: #f8f8f8;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_slider h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 36pt;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Botón del Carrusel */
+.btnSlider {
+  color: #fff;
+  font-size: 18pt;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 2px;
+  padding: 15px 50px;
+  border: 2px solid #fff;
+  background: transparent;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: 0.5s all;
+}
+
+/* Puntos de Navegación del Carrusel */
+.listslider {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 50%;
+  bottom: 5%;
+  list-style: none;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+
+.listslider li {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.listslider li a {
+  background: #252525;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+/* Estilos Generales */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: "Arial", sans-serif;
+  background-position: center center;
+  background-color: #ffffff; /* Un tono oscuro */
+  color: #000000; /* Texto claro */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn-ver-trabajos {
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 14px 28px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-wa {
+  position: fixed;
+  width: 85px;
+  height: 85px;
+  line-height: 85px;
+  bottom: 30px;
+  right: 30px;
+  background: #09e030;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.primario {
+  background-color: #756e65;
+}
+
+.primario:hover {
+  background-color: #b69f7e;
+  box-shadow: 0 0 30px #342d24;
+}
+
+/* Navbar */
+
+.navbar-nav .nav-link {
+  color: #332717;
+  font-size: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #b69f7e; /* Cambia el color al pasar el ratón */
+}
+
+.servicios-color {
+  background-color: #b69f7e;
+  border-radius: 0.5rem;
+}
+
+/* Sección de Resumen de Servicios */
+
+.resumen-servicios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+/* Tarjetas de Servicios para Clientes Residenciales */
+.resumen-servicios .card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.resumen-servicios .card:hover {
+  box-shadow: 0 0 30px #342d24;
+}
+
+/* Sección de Resumen de Trabajos Realizados */
+
+/* Tarjetas de Trabajos Realizados */
+.resumen-trabajos .card {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.resumen-trabajos .card:hover {
+  box-shadow: 0 0 30px #E0B909(0, 0, 0, 0.2);
+}
+
+.resumen-quien-eres {
+  background-color: #b59e7d;
+  color: #332717;
+}
+
+/* Imagen redonda en la sección Quién Eres */
+.resumen-quien-eres img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Lista de Habilidades y Experiencia en Quién Eres */
+.resumen-quien-eres ul {
+  list-style: none;
+  padding: 0;
+}
+
+.wrap {
+  width: 45rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem 3 rem;
+  border: 3px solid #fafafa10;
+  border-radius: 2rem;
+  background: #00000010;
+
+  /* box-shadow: 0 0 25px #222; */
+  backdrop-filter: blur(0.3rem);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #252525;
+  padding: 20px 0;
+}
+
+/* Footer - Enlace de Créditos */
+footer a {
+  color: #252525;
+}
+
+/* Footer - Enlace de Créditos al pasar el ratón */
+footer a:hover {
+  color: #252525;
+}
+
+/* --------------Estilos para el carrusel -----------------------*/
+#proyectoCarousel,
+#proyectoCarousel2 {
+  margin-bottom: 20px; /* Agrega un espacio entre cada bloque de carrusel y descripción */
+}
+
+.carousel-inner img {
+  border-radius: 8px; /* Borde redondeado para las imágenes del carrusel */
+}
+
+/* Estilos para la descripción del proyecto */
+.descripcion-proyecto {
+  padding: 20px;
+  background-color: #f8f9fa; /* Color de fondo para la sección de descripción */
+  border-radius: 8px;
+}
+
+.efecto-letras {
+  font-weight: bold; /* Peso de la fuente (negrita) */
+  text-shadow: 6px 6px 6px #E0B909(0, 0, 0, 0.5);
+}
+
+.sombras {
+  text-shadow: -5px -5px 5px #aaa;
+}
+
+hr {
+  color: #b69f7e; /* Cambia el color al pasar el ratón */
+  background-color: #b69f7e;
+  height: 5px;
+}
+
+p {
+  font-size: 16pt;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 22pt;
+  color: #332717;
+  font-weight: bold;
+}
+
+h3 {
+  color: #252525;
+  font-weight: bold;
+  font-size: 20px; /* Color del título */
+}
+
+span,
+h1 {
+  color: #332717;
+  font-weight: bold; /* Cambia el color del texto a negro (o el color deseado) */
+}
+.container-fluid {
+  --bs-gutter-x: 0rem;
+}
+/* Estilo para las letras de la lista */
+/* Agrega estilos adicionales según sea necesario para adaptarse al diseño general de tu sitio */
